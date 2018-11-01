@@ -41,6 +41,10 @@ def full?(board)
   board.none?{|space| space == " "}
 end
 
-def draw?
-
+def draw?(board)
+  if full?(board) && won?(board)
+    true
+  else
+    false
+  end
 end
